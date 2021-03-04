@@ -25,6 +25,8 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    // https://github.com/juliomrqz/nuxt-optimized-images
+    '@aceforth/nuxt-optimized-images',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -61,4 +63,8 @@ export default {
       ignored: '/node_modules/',
     },
   },
+
+  optimizedImages: {
+    optimizeImages: true,
+  }
 }
