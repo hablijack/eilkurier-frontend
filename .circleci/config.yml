@@ -1,45 +1,41 @@
-version: 2.1
+version: 2
 
 jobs:
-  cd:
-    machine: 
+  qualitygate:
+    machine:
       image: ubuntu-2004:202008-01
     resource_class: medium
     steps:
       - checkout
-
       - run:
-          name: Install dependencies
-          command: npm install
+          name: Lint
+          command: npm run lint
 
+  build:
+    machine:
+      image: ubuntu-2004:202008-01
+    resource_class: medium
+    working_directory: ~/repo
+    steps:
+      - checkout
       - run:
-          name: Build nuxt.js application
-          command: npm run build
-
-      #- run:
-      #    name: Run linter
-      #    command: npm run lint
-
-      #- run:
-      #    name: Run tests
-      #    command: npm run test
-
-      - run:
-          name: push to heroku
+          name: Build and push Docker Image to Heroku
           command: |
-            git remote add heroku https://git.heroku.com/eilkurier.git
-            git config --global user.email $HEROKU_USERNAME
-            git config --global user.name $HEROKU_USERNAME
-            git pull
-            git add .
-            git commit -m "Build"
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/eilkurier.git main:master
-
+            docker build -f ./src/main/docker/Dockerfile.native -t registry.heroku.com/$HEROKU_APP_NAME/web .
+            docker login -username=$HEROKU_USERNAME --password=$HEROKU_API_KEY registry.heroku.com
+            docker push registry.heroku.com/$HEROKU_APP_NAME/web
+      - run:
+          name: Install Heroku CLI
+          command: sudo curl https://cli-assets.heroku.com/install.sh | sh
+      - run:
+          name: Heroku Login
+          command: heroku container:login
+      - run:
+          name: Release Docker image to Heroku
+          command: heroku container:release --app $HEROKU_APP_NAME web
 workflows:
   version: 2
-  frontendbuild:
+  qualitygate_and_build:
     jobs:
-      - cd:
-          filters:
-            branches:
-              only: main
+      - qualitygate
+      - build
