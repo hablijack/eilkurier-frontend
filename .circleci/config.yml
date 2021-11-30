@@ -8,10 +8,6 @@ jobs:
       - checkout
 
       - run:
-          name: Install nodejs
-          command: 
-
-      - run:
           name: Install dependencies
           command: npm install
 
