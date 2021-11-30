@@ -1,6 +1,6 @@
 version: 2.1
 
-jobs:
+cd:
   buildanddeploy:
     docker:
       - image: cimg/node:lts
@@ -28,7 +28,6 @@ jobs:
           name: Setup Heroku CLI
           command: |
             bash .circleci/setup-heroku.sh
-            git remote add heroku https://git.heroku.com/eilkurier.git
 
       - run:
           name: push to heroku
@@ -36,9 +35,9 @@ jobs:
 
 workflows:
   version: 2
-  qualitygate_and_build:
+  frontendbuild:
     jobs:
-      - buildanddeploy:
+      - cd:
           filters:
             branches:
               only: main
