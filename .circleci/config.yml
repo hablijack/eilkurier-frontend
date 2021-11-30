@@ -1,8 +1,5 @@
 version: 2.1
 
-orbs:
-  heroku: circleci/heroku@0.0.10 # Invoke the Heroku orb
-
 jobs:
   buildanddeploy:
     docker:
@@ -31,7 +28,17 @@ jobs:
       #    name: Run tests
       #    command: npm run test
       
-      - heroku/deploy-via-git
+      - run:
+          name: Install Heroku CLI
+          command: sudo curl https://cli-assets.heroku.com/install.sh | sh
+
+      - run:
+          name: heroku login
+          command: heroku login
+      
+      - run:
+          name: push to heroku
+          command: git push heroku main
 
 workflows:
   version: 2
