@@ -15,8 +15,6 @@
   "dependencies": {
     "@nuxtjs/axios": "5.13.6",
     "@nuxtjs/pwa": "3.3.5",
-    "bootstrap": "4.6.1",
-    "bootstrap-vue": "2.21.2",
     "core-js": "3.9.1",
     "nuxt": "2.15.2"
   },
@@ -25,6 +23,7 @@
     "@nuxtjs/eslint-config": "5.0.0",
     "@nuxtjs/eslint-module": "3.0.2",
     "@nuxtjs/stylelint-module": "4.0.0",
+    "@nuxtjs/vuetify": "^1.12.2",
     "babel-eslint": "10.1.0",
     "chromedriver": "88.0.0",
     "eslint": "7.21.0",
@@ -36,10 +35,9 @@
     "imagemin-pngquant": "9.0.2",
     "nightwatch": "1.5.1",
     "prettier": "2.2.1",
-    "sass": "1.32.8",
-    "sass-loader": "10.1.1",
     "stylelint": "13.11.0",
     "stylelint-config-prettier": "8.0.2",
-    "stylelint-config-standard": "20.0.0"
+    "stylelint-config-standard": "20.0.0",
+    "webpack": "^4.46.0"
   }
 }

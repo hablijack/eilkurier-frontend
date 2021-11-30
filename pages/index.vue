@@ -1,191 +1,77 @@
 <template>
-  <div id="homepage-content" class="container page-content">
-    <section id="homepage-content" class="page-content">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1>Dein persönlicher Eilkurier!</h1>
+  <v-row justify="center" align="center">
+    <v-col cols="12" sm="8" md="6">
+      <v-card class="logo py-4 d-flex justify-center">
+        <NuxtLogo />
+        <VuetifyLogo />
+      </v-card>
+      <v-card>
+        <v-card-title class="headline">
+          Welcome to the Vuetify + Nuxt.js template
+        </v-card-title>
+        <v-card-text>
+          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
+          <p>
+            For more information on Vuetify, check out the <a
+              href="https://vuetifyjs.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              documentation
+            </a>.
+          </p>
+          <p>
+            If you have questions, please join the official <a
+              href="https://chat.vuetifyjs.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="chat"
+            >
+              discord
+            </a>.
+          </p>
+          <p>
+            Find a bug? Report it on the github <a
+              href="https://github.com/vuetifyjs/vuetify/issues"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="contribute"
+            >
+              issue board
+            </a>.
+          </p>
+          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
+          <div class="text-xs-right">
+            <em><small>&mdash; John Leider</small></em>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <img
-              class="img-responsive newspaper center-block"
-              src="~assets/img/zeitung.png"
-            />
-          </div>
-          <div class="col-md-8 info-text text-justify">
-            <p>
-              Kennst Du das? Du sitzt Sonntag Morgens am Frühstückstisch,
-              schmökert in der Tageszeitung deiner Wahl und es findet sich
-              partout nichts Interessantes. Vielleicht nimmt Dir auch die
-              Qualität des Geschriebenen sofort die Lust am Weiterlesen.
-            </p>
-            <p>
-              Wäre es nicht schön wenn ein Bote jeden Morgen genau die
-              Informationen zusammentragen würde, die Dich interessieren und sie
-              anschließend pünktlich und lesefertig bei Dir abliefert?
-            </p>
-            <p>
-              Wir gehen sogar noch einen Schritt weiter: Wäre es nicht schön
-              wenn diese News nicht an eine bestimmte Ausgabe gebunden sind,
-              sondern immer topaktuell vorliegen?
-            </p>
-            <p>
-              Der Eilkurier ist komplett kostenlos und wird es immer sein. Wenn
-              Du nähres zu unserem Geschäftsmodell erfahren möchtest erhältst Du
-              hier weiter informationen.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="login" id="login">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 hidden-xs login-logo">Login</div>
-          <div class="col-md-8 loginform">
-            <form role="form" action="/login" method="post">
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="email"
-                  name="email"
-                  value=""
-                  required=""
-                  title="Please enter you username"
-                  placeholder="example@gmail.com"
-                />
-                <label for="email" class="control-label">Benutzer</label>
-              </div>
-              <div class="form-group">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  name="password"
-                  value=""
-                  required=""
-                  title="Please enter your password"
-                />
-                <label for="password" class="control-label">Passwort</label>
-              </div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-lg">
-                  Anmelden
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="service" id="service">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="carousel slide" id="service-carousel">
-              <ol class="carousel-indicators">
-                <li
-                  data-target="#carousel-example-generic"
-                  data-slide-to="0"
-                  class="active"
-                ></li>
-                <li
-                  data-target="#carousel-example-generic"
-                  data-slide-to="1"
-                ></li>
-                <li
-                  data-target="#carousel-example-generic"
-                  data-slide-to="2"
-                ></li>
-                <li
-                  data-target="#carousel-example-generic"
-                  data-slide-to="3"
-                ></li>
-                <li
-                  data-target="#carousel-example-generic"
-                  data-slide-to="4"
-                ></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="item active">
-                  <div class="left">
-                    <h3>Zeit sparen</h3>
-                  </div>
-                  <div class="right">
-                    <img src="~assets/img/kalender.png" />
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="left">
-                    <img src="~assets/img/euro.png" />
-                  </div>
-                  <div class="right">
-                    <h3>Geldbeutel schonen</h3>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="left">
-                    <h3>Nerven schonen</h3>
-                  </div>
-                  <div class="right">
-                    <img src="~assets/img/algebra.png" />
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="left">
-                    <img src="~assets/img/welt.png" />
-                  </div>
-                  <div class="right">
-                    <h3>Immer Topaktuell</h3>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="left">
-                    <h3>Modernes Medium</h3>
-                  </div>
-                  <div class="right">
-                    <img src="~assets/img/synch_puzzle.png" />
-                  </div>
-                </div>
-              </div>
-              <a
-                class="left carousel-control"
-                href="#service-carousel"
-                data-slide="prev"
-              >
-                <span class="glyphicon glyphicon-chevron-left"></span>
-              </a>
-              <a
-                class="right carousel-control"
-                href="#service-carousel"
-                data-slide="next"
-              >
-                <span class="glyphicon glyphicon-chevron-right"></span>
-              </a>
-            </div>
-            <div class="main-text hidden-xs">
-              <div class="text-center">
-                <h2>Wir haben die Lösung:</h2>
-                <div class="">
-                  JETZT KOSTENLOS
-                  <a href="#">Anmelden</a>
-                  ODER
-                  <a href="/user/create">Registrieren</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+          <hr class="my-3">
+          <a
+            href="https://nuxtjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Nuxt Documentation
+          </a>
+          <br>
+          <a
+            href="https://github.com/nuxt/nuxt.js"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Nuxt GitHub
+          </a>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer />
+          <v-btn
+            color="primary"
+            nuxt
+            to="/inspire"
+          >
+            Continue
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-col>
+  </v-row>
 </template>
-
-<script>
-export default {}
-</script>
