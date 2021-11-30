@@ -11,7 +11,6 @@ WORKDIR /usr/src/eilkurier
 # update and install dependency
 RUN apk update && apk upgrade && apk add --no-cache --virtual .build_deps git python3 make g++
 
-
 # copy the app, note .dockerignore
 COPY . /usr/src/eilkurier/
 RUN npm install && npm run build
