@@ -33,7 +33,7 @@
     "eslint-plugin-prettier": "3.3.1",
     "eslint-plugin-vue": "7.7.0",
     "fibers": "5.0.0",
-    "imagemin-pngquant": "9.0.1",
+    "imagemin-pngquant": "9.0.2",
     "nightwatch": "1.5.1",
     "prettier": "2.2.1",
     "sass": "1.32.8",
