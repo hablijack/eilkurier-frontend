@@ -2,10 +2,14 @@ version: 2.1
 
 jobs:
   cd:
-    docker:
-      - image: cimg/node:lts
+    machine: true
+    resource_class: medium
     steps:
       - checkout
+
+      - run:
+          name: Install nodejs
+          command: 
 
       - run:
           name: Install dependencies
