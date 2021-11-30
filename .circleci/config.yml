@@ -10,7 +10,7 @@ jobs:
 
       - run:
           name: Install dependencies
-          command: npm install --production
+          command: npm install
 
       - run:
           name: Build nuxt.js application
