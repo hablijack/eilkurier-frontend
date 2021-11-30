@@ -1,7 +1,10 @@
-version: 2
+version: 2.1
+
+orbs:
+  heroku: circleci/heroku@0.0.10 # Invoke the Heroku orb
 
 jobs:
-  ci:
+  buildanddeploy:
     docker:
       - image: cimg/node:lts
     steps:
@@ -20,21 +23,18 @@ jobs:
           paths:
             - ~/.npm
 
-      - run:
-          name: Run linter
-          command: npm run lint
+      #- run:
+      #    name: Run linter
+      #    command: npm run lint
 
       - run:
           name: Run tests
           command: npm run test
+      
+      - heroku/deploy-via-git
 
 workflows:
-  version: 2
-  ci:
+  version: 2.1
+  qualitygate_and_build:
     jobs:
-      - ci:
-          filters:
-            branches:
-              only:
-                - main
-                - master
+      - buildanddeploy
