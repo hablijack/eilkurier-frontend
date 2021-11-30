@@ -23,18 +23,10 @@ jobs:
       #- run:
       #    name: Run tests
       #    command: npm run test
-      
-      - run:
-          name: Install Heroku CLI
-          command: sudo curl https://cli-assets.heroku.com/install.sh | sh
-
-      - run:
-          name: Setup Heroku CLI
-          command: bash .circleci/setup-heroku.sh
 
       - run:
           name: push to heroku
-          command: git push heroku main
+          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
 
 workflows:
   version: 2
