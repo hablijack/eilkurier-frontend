@@ -34,7 +34,9 @@ jobs:
       
       - run:
           name: push to heroku
-          command: git push heroku main
+          command: |
+            heroku git:remote -a eilkurier
+            git push heroku main
 
 workflows:
   version: 2
