@@ -26,9 +26,7 @@ jobs:
 
       - run:
           name: push to heroku
-          command: |
-            git remote add heroku https://git.heroku.com/eilkurier.git
-            git push heroku main:master
+          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/eilkurier.git main:master
 
 workflows:
   version: 2
