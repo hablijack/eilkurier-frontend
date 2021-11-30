@@ -9,7 +9,9 @@ jobs:
       - checkout
       - run:
           name: Lint
-          command: npm run lint
+          command: |
+            npm install
+            npm run lint
 
   build:
     machine:
