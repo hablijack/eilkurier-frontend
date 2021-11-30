@@ -9,11 +9,11 @@ jobs:
 
       - run:
           name: Install dependencies
-          command: npm install
+          command: npm install --production
 
       - run:
-          name: Install dependencies
-          command: npm build
+          name: Build nuxt.js application
+          command: npm run build
 
       #- run:
       #    name: Run linter
@@ -29,8 +29,7 @@ jobs:
 
       - run:
           name: Setup Heroku CLI
-          command: |
-            bash .circleci/setup-heroku.sh
+          command: bash .circleci/setup-heroku.sh
 
       - run:
           name: push to heroku
