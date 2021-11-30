@@ -27,9 +27,9 @@ jobs:
       #    name: Run linter
       #    command: npm run lint
 
-      - run:
-          name: Run tests
-          command: npm run test
+      #- run:
+      #    name: Run tests
+      #    command: npm run test
       
       - heroku/deploy-via-git
 
