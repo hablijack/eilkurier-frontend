@@ -36,7 +36,7 @@
     "eslint-plugin-vue": "7.20.0",
     "fibers": "5.0.0",
     "imagemin-pngquant": "9.0.2",
-    "nightwatch": "1.5.1",
+    "nightwatch": "1.7.12",
     "prettier": "2.2.1",
     "stylelint": "13.11.0",
     "stylelint-config-prettier": "8.0.2",
