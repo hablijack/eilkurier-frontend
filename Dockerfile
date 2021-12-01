@@ -1,5 +1,5 @@
 # Dockerfile
-FROM node:12-alpine
+FROM node:17-alpine
 
 ENV NUXT_HOST=0.0.0.0
 ENV NUXT_PORT=$PORT
