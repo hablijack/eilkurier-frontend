@@ -9,7 +9,7 @@ RUN mkdir -p /usr/src/eilkurier
 WORKDIR /usr/src/eilkurier
 
 # update and install dependency
-RUN apk update && apk --no-cache --virtual build-dependencies add python3 make g++
+RUN apk update && apk --no-cache --virtual build-dependencies add python3 make g++ libc6-compat
 
 # copy the app, note .dockerignore
 COPY . /usr/src/eilkurier/
