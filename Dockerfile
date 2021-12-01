@@ -1,6 +1,7 @@
 # Dockerfile
 FROM node:17-alpine
 
+ENV NODE_OPTIONS=--openssl-legacy-provider
 ENV NUXT_HOST=0.0.0.0
 ENV NUXT_PORT=$PORT
 
