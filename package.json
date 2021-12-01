@@ -38,7 +38,7 @@
     "imagemin-pngquant": "9.0.2",
     "nightwatch": "1.7.12",
     "prettier": "2.5.0",
-    "stylelint": "13.13.1",
+    "stylelint": "14.1.0",
     "stylelint-config-prettier": "8.0.2",
     "stylelint-config-standard": "20.0.0",
     "webpack": "4.46.0"
