@@ -1,9 +1,11 @@
 # Dockerfile
-FROM node:17-alpine
+FROM node:16-alpine
 
 ENV NODE_OPTIONS=--openssl-legacy-provider
 ENV NUXT_HOST=0.0.0.0
 ENV NUXT_PORT=$PORT
+
+RUN npm install -g npm
 
 # create destination directory
 RUN mkdir -p /usr/src/eilkurier
