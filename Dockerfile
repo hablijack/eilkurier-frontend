@@ -1,22 +1,31 @@
-# Dockerfile
-FROM node:alpine
+FROM node:lts as builder
 
-ENV NODE_OPTIONS=--openssl-legacy-provider
-ENV NUXT_HOST=0.0.0.0
+WORKDIR /app
+
+COPY . .
+
+RUN yarn install \
+    --prefer-offline \
+    --frozen-lockfile \
+    --non-interactive \
+    --production=false
+
+RUN yarn build
+
+RUN rm -rf node_modules && \
+    NODE_ENV=production yarn install \
+    --prefer-offline \
+    --pure-lockfile \
+    --non-interactive \
+    --production=true
+
+FROM node:lts
+
+WORKDIR /app
+
+COPY --from=builder /app  .
+
+ENV HOST=0.0.0.0
 ENV NUXT_PORT=$PORT
 
-# create destination directory
-RUN mkdir -p /usr/src/eilkurier
-WORKDIR /usr/src/eilkurier
-
-# update and install dependency
-RUN apk update && apk --no-cache --virtual build-dependencies add python3 make g++ libc6-compat
-
-# copy the app, note .dockerignore
-COPY . /usr/src/eilkurier/
-RUN npm install 
-RUN npm run build
-
-RUN npm prune --production && apk del .build_deps
-
-CMD ["npm", "start"]
+CMD [ "yarn", "start" ]
