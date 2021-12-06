@@ -1,16 +1,11 @@
 <template>
   <v-app>
+    <PageNavigation />
     <v-main>
-      <v-container>
+      <v-container fluid>
         <Nuxt />
       </v-container>
     </v-main>
-    <v-footer app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+    <PageFooter />
   </v-app>
 </template>
-
-<script>
-export default {}
-</script>
