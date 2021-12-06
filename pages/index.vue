@@ -6,8 +6,9 @@
       <v-spacer />
     </v-row>
     <v-row>
+      <v-spacer />
       <v-col cols="4"><img src="~/assets/img/newspaper.png" /></v-col>
-      <v-col cols="8">
+      <v-col cols="7" class="welcome-text">
         <p>
           Kennst Du das? Du sitzt Sonntag Morgens am Frühstückstisch, schmökert
           in der Tageszeitung deiner Wahl und es findet sich partout nichts
@@ -30,6 +31,7 @@
           weiter informationen.
         </p>
       </v-col>
+      <v-spacer />
     </v-row>
   </v-container>
 </template>
@@ -41,5 +43,12 @@ h1 {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.welcome-text {
+  color: black;
+  font-family: "Playfair Display", serif;
+  text-align: justify;
 }
 </style>
