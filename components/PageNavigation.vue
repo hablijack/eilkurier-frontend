@@ -13,7 +13,7 @@
         </v-col>
         <v-col cols="2" align="center" class="pa-0">
           <v-toolbar-title class="logo">
-            <img src="~/assets/img/logo_header.png" height="49" />
+            <img src="~/assets/img/logo_white.png" height="49" />
             <h1>Eilkurier</h1>
             <v-spacer />
           </v-toolbar-title>
