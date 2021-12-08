@@ -18,13 +18,6 @@ RUN yarn install  \
 ADD . ./
 RUN yarn build --standalone
 
-RUN rm -rf node_modules && \
-    NODE_ENV=production yarn install \
-    --prefer-offline \
-    --pure-lockfile \
-    --non-interactive \
-    --production=true
-
 FROM node:lts-alpine
 
 WORKDIR /app
