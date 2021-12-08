@@ -7,8 +7,8 @@
     </v-row>
     <v-row>
       <v-spacer />
-      <v-col cols="4"><img src="~/assets/img/newspaper.png" /></v-col>
-      <v-col cols="7" class="welcome-text">
+      <v-col cols="3"><img src="~/assets/img/newspaper.png" /></v-col>
+      <v-col cols="5" class="welcome-text">
         <p>
           Kennst Du das? Du sitzt Sonntag Morgens am Frühstückstisch, schmökert
           in der Tageszeitung deiner Wahl und es findet sich partout nichts
@@ -33,6 +33,7 @@
       </v-col>
       <v-spacer />
     </v-row>
+    <LoginForm />
   </v-container>
 </template>
 

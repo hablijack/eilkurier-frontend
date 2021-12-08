@@ -18,7 +18,9 @@
             <v-spacer />
           </v-toolbar-title>
         </v-col>
-        <v-spacer />
+        <v-col cols="4" class="pa-0">
+          {{ this.$auth.loggedIn ? this.$auth.user.nickname : "" }}
+        </v-col>
       </v-row>
       <v-row class="banner" align="center" justify="center">
         <h2>Nachrichten wie Sie sein sollten</h2>
@@ -26,6 +28,7 @@
     </v-container>
   </v-app-bar>
 </template>
+
 
 <style lang="scss" scoped>
 .banner {
