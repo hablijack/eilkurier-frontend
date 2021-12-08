@@ -1,4 +1,4 @@
-FROM node:lts as builder
+FROM node:lts-alpine as builder
 
 ARG AUTH0_CLIENT_ID
 ARG AUTH0_DOMAIN
@@ -25,7 +25,7 @@ RUN rm -rf node_modules && \
     --non-interactive \
     --production=true
 
-FROM node:lts
+FROM node:lts-alpine
 
 WORKDIR /app
 
@@ -38,4 +38,4 @@ COPY --from=builder /app/static  .
 ENV HOST=0.0.0.0
 ENV NUXT_PORT=$PORT
 
-CMD [ "yarn", "start" ]
+CMD [ "npx", "nuxt-start" ]
