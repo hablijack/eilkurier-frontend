@@ -4,9 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-ENV AUTH0_DOMAIN=""
-ENV AUTH0_CLIENT_ID=""
-
 RUN yarn install \
     --prefer-offline \
     --frozen-lockfile \
