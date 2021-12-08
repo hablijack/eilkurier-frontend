@@ -9,10 +9,7 @@ ENV AUTH0_CLIENT_ID=${AUTH0_CLIENT_ID}
 WORKDIR /app
 
 ADD yarn.lock package.json ./
-RUN yarn install  \
-    --prefer-offline \
-    --pure-lockfile \
-    --non-interactive
+RUN yarn install
 
 ADD . ./
 RUN yarn build --standalone
@@ -21,8 +18,6 @@ FROM node:lts-alpine
 
 WORKDIR /app
 
-RUN yarn add "nuxt-start@2.15.8"
-
 COPY --from=builder /app/.nuxt  ./.nuxt
 COPY --from=builder /app/nuxt.config.js  .
 COPY --from=builder /app/static  .
@@ -30,4 +25,4 @@ COPY --from=builder /app/static  .
 ENV HOST=0.0.0.0
 ENV NUXT_PORT=$PORT
 
-CMD [ "npx", "nuxt-start" ]
+CMD [ "yarn", "start" ]
