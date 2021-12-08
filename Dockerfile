@@ -8,11 +8,9 @@ ENV AUTH0_CLIENT_ID=${AUTH0_CLIENT_ID}
 
 WORKDIR /app
 
-ADD yarn.lock ./
-ADD package.json ./
+ADD . ./
 RUN yarn install
 
-ADD . ./
 RUN yarn build --standalone
 
 FROM node:lts-alpine
@@ -23,7 +21,7 @@ RUN yarn add nuxt-start
 
 COPY --from=builder /app/.nuxt ./.nuxt
 COPY --from=builder /app/nuxt.config.js .
-COPY --from=builder /app/static .
+COPY --from=builder /app/static ./static
 
 ENV HOST=0.0.0.0
 ENV NUXT_PORT=$PORT
