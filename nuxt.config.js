@@ -17,13 +17,13 @@ export default {
 
   buildModules: [
     '@nuxtjs/vuetify',
-    '@nuxtjs/google-fonts'
-  ],
-
-  modules: [
+    '@nuxtjs/google-fonts',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/auth'
+  ],
+
+  modules: [
   ],
 
   auth: {
