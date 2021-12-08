@@ -8,15 +8,15 @@ ENV AUTH0_CLIENT_ID=${AUTH0_CLIENT_ID}
 
 WORKDIR /app
 
-COPY . .
-
-RUN yarn install \
+ADD yarn.lock package.json ./
+RUN yarn install  \
     --prefer-offline \
-    --frozen-lockfile \
+    --pure-lockfile \
     --non-interactive \
-    --production=false
+    --production=true
 
-RUN yarn build
+ADD . ./
+RUN yarn build --standalone
 
 RUN rm -rf node_modules && \
     NODE_ENV=production yarn install \
