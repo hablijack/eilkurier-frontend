@@ -29,6 +29,8 @@ FROM node:lts
 
 WORKDIR /app
 
+RUN yarn add "nuxt-start@2.15.8"
+
 COPY --from=builder /app/.nuxt  ./.nuxt
 COPY --from=builder /app/nuxt.config.js  .
 COPY --from=builder /app/static  .
