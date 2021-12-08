@@ -29,7 +29,9 @@ FROM node:lts
 
 WORKDIR /app
 
-COPY --from=builder /app  .
+COPY --from=builder /app/.nuxt  ./.nuxt
+COPY --from=builder /app/nuxt.config.js  .
+COPY --from=builder /app/static  .
 
 ENV HOST=0.0.0.0
 ENV NUXT_PORT=$PORT
