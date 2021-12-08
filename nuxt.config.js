@@ -1,5 +1,3 @@
-import colors from 'vuetify/es5/util/colors'
-
 export default {
   head: {
     title: 'Eilkurier - Nachrichten wie Sie sein sollten',
