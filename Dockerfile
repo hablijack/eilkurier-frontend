@@ -12,8 +12,7 @@ ADD yarn.lock package.json ./
 RUN yarn install  \
     --prefer-offline \
     --pure-lockfile \
-    --non-interactive \
-    --production=true
+    --non-interactive
 
 ADD . ./
 RUN yarn build --standalone
