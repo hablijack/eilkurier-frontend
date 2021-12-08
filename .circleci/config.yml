@@ -1,17 +1,17 @@
 version: 2
 
 jobs:
-  qualitygate:
-    machine:
-      image: ubuntu-2004:202008-01
-    resource_class: medium
-    steps:
-      - checkout
-      - run:
-          name: Lint
-          command: |
-            npm install
-            npm run lint
+  #qualitygate:
+  #  machine:
+  #    image: ubuntu-2004:202008-01
+  #  resource_class: medium
+  #  steps:
+  #    - checkout
+  #    - run:
+  #        name: Lint
+  #        command: |
+  #          npm install
+  #          npm run lint
 
   build:
     machine:
@@ -39,5 +39,5 @@ workflows:
   version: 2
   qualitygate_and_build:
     jobs:
-      - qualitygate
+      #- qualitygate
       - build
