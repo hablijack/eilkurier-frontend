@@ -46,7 +46,24 @@ h1 {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 10px;
+  &:before {
+    content: "";
+    width: 650px;
+    height: 7px;
+    border-top: 2px solid black;
+    display: block;
+    margin: 0 auto;
+  }
+  &:after {
+    content: "";
+    width: 550px;
+    height: 10px;
+    border-bottom: 2px solid black;
+    display: block;
+    margin: 0 auto;
+  }
 }
+
 .welcome-text {
   color: black;
   font-family: "Playfair Display", serif;

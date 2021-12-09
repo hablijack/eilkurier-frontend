@@ -6,18 +6,38 @@
         <v-col class="loginform label" cols="3">
           {{ this.$auth.loggedIn ? "Logout" : "Login" }}
         </v-col>
-        <v-col class="loginform btn" cols="5" v-if="!this.$auth.loggedIn">
+        <v-col
+          justify="center"
+          align="center"
+          class="loginform btn"
+          cols="5"
+          v-if="!this.$auth.loggedIn"
+        >
           <v-btn
             dark
             depressed
+            x-large
             color="#6b2f1b"
             @click="$auth.loginWith('auth0')"
           >
             Jetzt Anmelden
           </v-btn>
         </v-col>
-        <v-col class="loginform btn" cols="5" v-if="this.$auth.loggedIn">
-          <v-btn dark depressed color="#6b2f1b" @click="$auth.logout()">
+        <v-col
+          class="loginform btn"
+          cols="5"
+          v-if="this.$auth.loggedIn"
+          justify="center"
+          align="center"
+        >
+          <v-btn
+            dark
+            depressed
+            x-large
+            outlined
+            color="#6b2f1b"
+            @click="$auth.logout()"
+          >
             Jetzt Abmelden
           </v-btn>
         </v-col>
@@ -39,5 +59,9 @@
   color: white;
   font-size: 38px;
   font-family: "Brawler", serif;
+}
+
+button {
+  font-weight: bold;
 }
 </style>
