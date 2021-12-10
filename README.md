@@ -1,3 +1,5 @@
+[![CodeScene general](https://codescene.io/images/analyzed-by-codescene-badge.svg)](https://codescene.io/projects/21428)
+
 # eilkurier
 
 ## Build Setup
