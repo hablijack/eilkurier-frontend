@@ -1,13 +1,14 @@
 
-export default function ({ $auth, $axios }) {
-    if ($auth.loggedIn) {
-        console.log($auth.user)
-        /*$axios.post('https://eilkurier-backend.herokuapp.com/api/users', $auth.user)
+export default function ({ $auth, $axios, $config }) {
+    if ($auth.loggedIn && !$auth.user.id) {
+        return $axios.post($config.backendUrl + '/api/users', $auth.user)
             .then(function (response) {
-                console.log(response);
+                const user = $auth.user;
+                user.id = response.data.id;
+                $auth.setUser(user);
             })
             .catch(function (error) {
                 console.log(error);
-            });*/
+            });
     }
 };

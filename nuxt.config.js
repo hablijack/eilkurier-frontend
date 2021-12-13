@@ -71,5 +71,9 @@ export default {
       Brawler: true,
       "Playfair Display": true
     }
+  },
+
+  publicRuntimeConfig: {
+    backendUrl: 'https://eilkurier-backend.herokuapp.org'
   }
 }
