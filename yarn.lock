@@ -6082,10 +6082,10 @@ netmask@^2.0.1:
   resolved "https://registry.yarnpkg.com/netmask/-/netmask-2.0.2.tgz#8b01a07644065d536383835823bc52004ebac5e7"
   integrity sha512-dBpDMdxv9Irdq66304OLfEmQ9tbNRFnFTuZiLo+bD+r332bBmMJ8GBLXklIXXgxd3+v9+KUnZaUR5PJMa75Gsg==
 
-nightwatch@1.7.12:
-  version "1.7.12"
-  resolved "https://registry.yarnpkg.com/nightwatch/-/nightwatch-1.7.12.tgz#afb9a084bf242a4d4e41846a4ae9700296115845"
-  integrity sha512-3icG3aS5DMqorOGiILlJ4cDPIuelFv6phJSKsaKnPHpjIihPKIMt02909yxfDHmYsFzCoiKkI5UH9HcUYTjLVg==
+nightwatch@1.7.13:
+  version "1.7.13"
+  resolved "https://registry.yarnpkg.com/nightwatch/-/nightwatch-1.7.13.tgz#2d455ab5fadf8ec514622828171f4c2c8cbf44b1"
+  integrity sha512-bX7mI5JmRdGvVxWYIyUgpF1vuBc/Tlx3nFQc511CW90gbyvQ3PY18wqT5wul45mR2BjDCnCYkxHJcXRKnxC91A==
   dependencies:
     ansi-regex "^6.0.1"
     assertion-error "^1.1.0"
