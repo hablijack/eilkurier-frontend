@@ -52,6 +52,8 @@
   background-color: white;
   border: 2px solid #6b2f1b;
   height: 99px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .label {

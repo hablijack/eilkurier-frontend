@@ -5,7 +5,7 @@
       <h1>Dein persönlicher Eilkurier</h1>
       <v-spacer />
     </v-row>
-    <v-row>
+    <v-row align="center">
       <v-spacer />
       <v-col cols="3" align="center">
         <img src="~/assets/img/newspaper.png" />
@@ -36,6 +36,7 @@
       <v-spacer />
     </v-row>
     <LoginForm />
+    <InfoSlider />
   </v-container>
 </template>
 

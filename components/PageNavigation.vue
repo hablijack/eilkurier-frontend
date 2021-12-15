@@ -1,5 +1,14 @@
 <template>
-  <v-app-bar app color="#6B2F1B" dark flat absolute :height="120" class="ma-0">
+  <v-app-bar
+    app
+    color="#6B2F1B"
+    dark
+    flat
+    fixed
+    :height="120"
+    class="ma-0"
+    elevate-on-scroll
+  >
     <v-container fluid class="pa-0">
       <v-row class="ma-0">
         <v-col cols="5" class="pa-0 pl-8">
