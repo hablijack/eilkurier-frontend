@@ -32,8 +32,9 @@ export default {
 
   auth: {
     redirect: {
-      login: '/', // redirect user when not connected
-      callback: '/auth/signed-in'
+      login: '/', // redirect when login is required
+      callback: '/auth/signed-in',
+      home: '/test' // redirect after successful login
     },
     strategies: {
       local: false,
