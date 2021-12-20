@@ -22,7 +22,7 @@
     "nuxt": "2.15.8",
     "sass": "1.45.0",
     "sass-loader": "10.2.0",
-    "vuedraggable": "^2.24.3"
+    "vuedraggable": "2.24.3"
   },
   "devDependencies": {
     "chromedriver": "96.0.0",
