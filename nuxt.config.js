@@ -33,8 +33,8 @@ export default {
   auth: {
     redirect: {
       login: '/', // redirect when login is required
-      callback: '/auth/signed-in',
-      home: '/test' // redirect after successful login
+      callback: '/auth/signed-in', // landingpage after 
+      home: '/wizard' // redirect after successful login
     },
     strategies: {
       local: false,
@@ -47,7 +47,21 @@ export default {
 
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
-    treeShake: true
+    treeShake: true,
+    theme: {
+      options: { customProperties: true },
+      themes: {
+        light: {
+          primary: '#6B2F1B',
+          secondary: '#784C18',
+          accent: '#36156B',
+          info: '#1C87B8',
+          warning: '#B8431C',
+          error: '#82251A',
+          success: '#189E33'
+        }
+      }
+    }
   },
 
   axios: {},
@@ -73,6 +87,10 @@ export default {
       "Playfair Display": true
     }
   },
+
+  plugins: [
+    { src: '@/plugins/draggable' }
+  ],
 
   publicRuntimeConfig: {
     backendUrl: 'https://eilkurier-backend.herokuapp.org'
