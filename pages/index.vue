@@ -10,7 +10,7 @@
       <v-col cols="3" align="center">
         <img src="~/assets/img/newspaper.png" />
       </v-col>
-      <v-col cols="5" class="welcome-text">
+      <v-col cols="4" class="welcome-text">
         <p>
           Kennst Du das? Du sitzt Sonntag Morgens am Frühstückstisch, schmökert
           in der Tageszeitung deiner Wahl und es findet sich partout nichts

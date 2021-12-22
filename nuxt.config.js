@@ -21,13 +21,13 @@ export default {
 
   buildModules: [
     '@nuxtjs/vuetify',
-    '@nuxtjs/google-fonts',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/auth'
   ],
 
   modules: [
+    'nuxt-webfontloader',
   ],
 
   auth: {
@@ -80,11 +80,11 @@ export default {
     },
   },
 
-  googleFonts: {
-    display: 'swap',
-    families: {
-      Brawler: true,
-      "Playfair Display": true
+
+  webfontloader: {
+    google: {
+      families: ['Roboto:400', 'Brawler', 'Playfair Display'],
+
     }
   },
 
