@@ -7,10 +7,10 @@
     </v-row>
     <v-row align="center">
       <v-spacer />
-      <v-col cols="3" align="center">
+      <v-col cols="12" lg="3" xl="3" align="center">
         <img src="~/assets/img/newspaper.png" />
       </v-col>
-      <v-col cols="4" class="welcome-text">
+      <v-col cols="12" lg="4" xl="4" class="welcome-text">
         <p>
           Kennst Du das? Du sitzt Sonntag Morgens am Frühstückstisch, schmökert
           in der Tageszeitung deiner Wahl und es findet sich partout nichts
@@ -51,7 +51,7 @@ h1 {
   margin-bottom: 10px;
   &:before {
     content: "";
-    width: 650px;
+    width: 100%;
     height: 7px;
     border-top: 2px solid black;
     display: block;
@@ -59,7 +59,7 @@ h1 {
   }
   &:after {
     content: "";
-    width: 550px;
+    width: 70%;
     height: 10px;
     border-bottom: 2px solid black;
     display: block;

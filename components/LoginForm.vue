@@ -3,14 +3,16 @@
     <v-form>
       <v-row class="ma-0" justify="center">
         <v-spacer />
-        <v-col class="loginform label" cols="3">
+        <v-col class="loginform label" cols="6" lg="3" xl="3">
           {{ this.$auth.loggedIn ? "Logout" : "Login" }}
         </v-col>
         <v-col
           justify="center"
           align="center"
           class="loginform btn"
-          cols="5"
+          cols="6"
+          lg="5"
+          xl="5"
           v-if="!this.$auth.loggedIn"
         >
           <v-btn
