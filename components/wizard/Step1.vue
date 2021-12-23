@@ -27,62 +27,60 @@
             </v-alert>
           </v-col>
           <v-spacer />
-          <v-col cols="3">
-            <h3>Draggable 1</h3>
-            <draggable
-              class="list-group"
-              :list="list1"
-              group="people"
-              @change="log"
-            >
-              <transition-group type="transition" name="flip-list">
-                <li
-                  class="list-group-item"
-                  v-for="element in list1"
-                  :key="element.order"
+          <v-col cols="4">
+            <v-card>
+              <v-list>
+                <v-subheader>Was interessiert Dich?</v-subheader>
+                <draggable
+                  v-model="items"
+                  :options="{ group: 'people' }"
+                  style="min-height: 10px"
+                  @change="log"
                 >
-                  <i
-                    :class="
-                      element.fixed
-                        ? 'fa fa-anchor'
-                        : 'glyphicon glyphicon-pushpin'
-                    "
-                    @click="element.fixed = !element.fixed"
-                    aria-hidden="true"
-                  ></i>
-                  {{ element.name }}
-                </li>
-              </transition-group>
-            </draggable>
+                  <v-list-item v-for="(item, i) in list2" :key="i">
+                    <v-list-item-icon>
+                      <v-icon>mdi-apps</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-content>
+                      <v-list-item-title
+                        v-text="item.title"
+                      ></v-list-item-title>
+                      <v-list-item-subtitle
+                        v-text="item.title"
+                      ></v-list-item-subtitle>
+                    </v-list-item-content>
+                  </v-list-item>
+                </draggable>
+              </v-list>
+            </v-card>
           </v-col>
 
-          <v-col cols="3">
-            <h3>Draggable 2</h3>
-            <draggable
-              class="list-group"
-              :list="list2"
-              group="people"
-              @change="log"
-            >
-              <transition-group type="transition" name="flip-list">
-                <li
-                  class="list-group-item"
-                  v-for="element in list2"
-                  :key="element.order"
+          <v-col cols="4">
+            <v-card>
+              <v-list>
+                <v-subheader>Unsere Kategorien:</v-subheader>
+                <draggable
+                  v-model="items"
+                  :options="{ group: 'people' }"
+                  style="min-height: 10px"
+                  @change="log"
                 >
-                  <i
-                    :class="
-                      element.fixed
-                        ? 'fa fa-anchor'
-                        : 'glyphicon glyphicon-pushpin'
-                    "
-                    @click="element.fixed = !element.fixed"
-                    aria-hidden="true"
-                  ></i>
-                  {{ element.name }}
-                </li>
-              </transition-group>
-            </draggable>
+                  <v-list-item v-for="(item, i) in list2" :key="i">
+                    <v-list-item-icon>
+                      <v-icon>mdi-apps</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-content>
+                      <v-list-item-title
+                        v-text="item.title"
+                      ></v-list-item-title>
+                      <v-list-item-subtitle
+                        v-text="item.title"
+                      ></v-list-item-subtitle>
+                    </v-list-item-content>
+                  </v-list-item>
+                </draggable>
+              </v-list>
+            </v-card>
           </v-col>
         </v-row>
       </v-container>
@@ -144,16 +142,6 @@ h2 {
 </style>
 
 <script>
-const message = [
-  "vue.draggable",
-  "draggable",
-  "component",
-  "for",
-  "vue.js 2.0",
-  "based",
-  "on",
-  "Sortablejs",
-];
 export default {
   methods: {
     nextClick() {
@@ -162,12 +150,34 @@ export default {
   },
   data() {
     return {
-      list1: message.map((name, index) => {
-        return { name, order: index + 1 };
-      }),
-      list2: message.map((name, index) => {
-        return { name, order: index + 1 };
-      }),
+      list1: [
+        {
+          id: 1,
+          avatar: "https://s3.amazonaws.com/vuetify-docs/images/lists/1.jpg",
+          title: "Brunch this life?",
+          subtitle: "Subtitle 1",
+        },
+      ],
+      list2: [
+        {
+          id: 1,
+          avatar: "https://s3.amazonaws.com/vuetify-docs/images/lists/1.jpg",
+          title: "Brunch this life?",
+          subtitle: "Subtitle 1",
+        },
+        {
+          id: 2,
+          avatar: "https://s3.amazonaws.com/vuetify-docs/images/lists/2.jpg",
+          title: "Winter Lunch",
+          subtitle: "Subtitle 2",
+        },
+        {
+          id: 3,
+          avatar: "https://s3.amazonaws.com/vuetify-docs/images/lists/3.jpg",
+          title: "Oui oui",
+          subtitle: "Subtitle 3",
+        },
+      ],
     };
   },
   methods: {
