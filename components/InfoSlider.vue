@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row class="ma-0" justify="center">
-      <v-col cols="3" align="center">
+      <v-col cols="12" align="center">
         <h2>Wir haben die Lösung</h2>
         JETZT KOSTENLOS
         <a href="#" :v-if="!$auth.loggedIn" @click="$auth.loginWith('auth0')">
@@ -10,7 +10,7 @@
       </v-col>
     </v-row>
     <v-row class="ma-0" justify="center">
-      <v-col cols="7">
+      <v-col cols="12" md="7">
         <v-carousel cycle light hide-delimiter-background>
           <v-carousel-item>
             <v-sheet height="100%" tile color="transparent">
