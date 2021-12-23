@@ -23,11 +23,11 @@ export default {
     '@nuxtjs/vuetify',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/auth'
+    '@nuxtjs/auth',
+    'nuxt-webfontloader',
   ],
 
   modules: [
-    'nuxt-webfontloader',
   ],
 
   auth: {
@@ -84,7 +84,6 @@ export default {
   webfontloader: {
     google: {
       families: ['Roboto:400', 'Brawler', 'Playfair Display'],
-
     }
   },
 
