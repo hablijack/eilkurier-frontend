@@ -92,6 +92,6 @@ export default {
   ],
 
   publicRuntimeConfig: {
-    backendUrl: 'https://eilkurier-backend.herokuapp.org'
+    backendUrl: 'https://eilkurier-backend.herokuapp.com/api'
   }
 }

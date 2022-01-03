@@ -7,5 +7,6 @@
       </v-container>
     </v-main>
     <PageFooter />
+    <AlertSnackbars />
   </v-app>
 </template>

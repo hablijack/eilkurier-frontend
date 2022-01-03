@@ -32,21 +32,24 @@
               <v-list>
                 <v-subheader>Was interessiert Dich?</v-subheader>
                 <draggable
-                  v-model="items"
-                  :options="{ group: 'people' }"
-                  style="min-height: 10px"
+                  :list="categories.choosen"
+                  group="categories"
+                  style="min-height: 600px"
                   @change="log"
                 >
-                  <v-list-item v-for="(item, i) in list2" :key="i">
+                  <v-list-item
+                    v-for="(category, i) in categories.choosen"
+                    :key="i"
+                  >
                     <v-list-item-icon>
                       <v-icon>mdi-apps</v-icon>
                     </v-list-item-icon>
                     <v-list-item-content>
                       <v-list-item-title
-                        v-text="item.title"
+                        v-text="category.name"
                       ></v-list-item-title>
                       <v-list-item-subtitle
-                        v-text="item.title"
+                        v-text="category.description"
                       ></v-list-item-subtitle>
                     </v-list-item-content>
                   </v-list-item>
@@ -60,21 +63,24 @@
               <v-list>
                 <v-subheader>Unsere Kategorien:</v-subheader>
                 <draggable
-                  v-model="items"
-                  :options="{ group: 'people' }"
-                  style="min-height: 10px"
+                  :list="categories.remote"
+                  group="categories"
+                  style="min-height: 600px"
                   @change="log"
                 >
-                  <v-list-item v-for="(item, i) in list2" :key="i">
+                  <v-list-item
+                    v-for="(category, i) in categories.remote"
+                    :key="i"
+                  >
                     <v-list-item-icon>
                       <v-icon>mdi-apps</v-icon>
                     </v-list-item-icon>
                     <v-list-item-content>
                       <v-list-item-title
-                        v-text="item.title"
+                        v-text="category.name"
                       ></v-list-item-title>
                       <v-list-item-subtitle
-                        v-text="item.title"
+                        v-text="category.description"
                       ></v-list-item-subtitle>
                     </v-list-item-content>
                   </v-list-item>
@@ -104,6 +110,9 @@
 .ghost {
   opacity: 0.5;
   background: #c8ebfb;
+}
+.v-list-item {
+  cursor: pointer;
 }
 .list-group {
   min-height: 20px;
@@ -150,35 +159,28 @@ export default {
   },
   data() {
     return {
-      list1: [
-        {
-          id: 1,
-          avatar: "https://s3.amazonaws.com/vuetify-docs/images/lists/1.jpg",
-          title: "Brunch this life?",
-          subtitle: "Subtitle 1",
-        },
-      ],
-      list2: [
-        {
-          id: 1,
-          avatar: "https://s3.amazonaws.com/vuetify-docs/images/lists/1.jpg",
-          title: "Brunch this life?",
-          subtitle: "Subtitle 1",
-        },
-        {
-          id: 2,
-          avatar: "https://s3.amazonaws.com/vuetify-docs/images/lists/2.jpg",
-          title: "Winter Lunch",
-          subtitle: "Subtitle 2",
-        },
-        {
-          id: 3,
-          avatar: "https://s3.amazonaws.com/vuetify-docs/images/lists/3.jpg",
-          title: "Oui oui",
-          subtitle: "Subtitle 3",
-        },
-      ],
+      categories: {
+        choosen: [],
+        remote: [],
+      },
+      hasErrors: false,
     };
+  },
+  mounted() {
+    const url = `${this.$config.backendUrl}/categories`;
+    let categoryList = [];
+    this.$axios
+      .get(url)
+      .then((response) => (this.categories.remote = response.data))
+      .catch((error) => {
+        this.hasErrors = true;
+        const alert = {
+          message: "Fehler beim Laden der Kategorien!",
+          details: `Beim Aufruf von ${url} ist folgendes Problem aufgetreten: ${error.message}`,
+          show: true,
+        };
+        this.$store.commit("alerts/ADD_ALERT", alert);
+      });
   },
   methods: {
     nextClick: function () {
