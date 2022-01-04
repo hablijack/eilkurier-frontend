@@ -46,6 +46,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.v-stepper__header {
+  background-color: #f9f7f1;
+}
 h1 {
   font-family: "Playfair Display", serif;
   color: black;
