@@ -25,9 +25,12 @@
       </h1>
 
       <v-stepper-items>
-        <WizardStep1 v-model="currentStep" />
+        <WizardStep1
+          v-model="currentStep"
+          @category_choosen_event="categoryChoosenEvent"
+        />
 
-        <WizardStep2 v-model="currentStep" />
+        <WizardStep2 v-model="currentStep" :feeds="feeds" />
 
         <WizardStep3 v-model="currentStep" />
       </v-stepper-items>
@@ -39,8 +42,32 @@
 export default {
   data() {
     return {
+      feeds: [],
       currentStep: 1,
     };
+  },
+  methods: {
+    categoryChoosenEvent(selectedCategories) {
+      let idParamString = [];
+      for (var i = 0; i < selectedCategories.length; ++i) {
+        idParamString.push(selectedCategories[i]["id"]);
+      }
+      idParamString = idParamString
+        .map((n, index) => `categoryId=${n}`)
+        .join("&");
+      this.$axios
+        .get(`${this.$config.backendUrl}/categories/feeds?${idParamString}`)
+        .then((response) => (this.feeds = response.data))
+        .catch((error) => {
+          this.hasErrors = true;
+          const alert = {
+            message: "Fehler beim Laden der Kategorien!",
+            details: `Beim Aufruf von ${url} ist folgendes Problem aufgetreten: ${error.message}`,
+            show: true,
+          };
+          this.$store.commit("alerts/ADD_ALERT", alert);
+        });
+    },
   },
 };
 </script>

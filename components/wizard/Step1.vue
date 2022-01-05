@@ -168,7 +168,6 @@ export default {
   },
   mounted() {
     const url = `${this.$config.backendUrl}/categories`;
-    let categoryList = [];
     this.$axios
       .get(url)
       .then((response) => (this.categories.remote = response.data))
@@ -184,10 +183,11 @@ export default {
   },
   methods: {
     nextClick: function () {
+      this.$emit("category_choosen_event", this.categories.choosen);
       this.$emit("input", 2);
     },
     log: function (evt) {
-      window.console.log(evt);
+      //window.console.log(evt);
     },
   },
 };

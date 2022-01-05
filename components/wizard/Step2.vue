@@ -27,7 +27,24 @@
               und ändern, deine Entscheidungen sind nicht endgültig.
             </v-alert>
           </v-col>
-          <v-spacer />
+          <v-col cols="8">
+            <v-container fluid>
+              <v-row>
+                <v-col cols="2" v-for="feed in feeds" :key="feed.id">
+                  <v-card height="300">
+                    <v-img :max-height="125" :src="feed.picture"></v-img>
+                    <v-card-title>{{ feed.name }}</v-card-title>
+                    <v-card-text>{{ feed.description }}</v-card-text>
+                    <v-card-actions>
+                      <v-btn color="deep-purple lighten-2" text>
+                        Reserve
+                      </v-btn>
+                    </v-card-actions>
+                  </v-card>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-col>
         </v-row>
       </v-container>
     </v-card>
@@ -70,6 +87,12 @@ h2 {
 
 <script>
 export default {
+  props: {
+    feeds: {
+      type: Array,
+      required: true,
+    },
+  },
   methods: {
     nextClick() {
       this.$emit("input", 3);
@@ -77,6 +100,15 @@ export default {
     backClick() {
       this.$emit("input", 1);
     },
+    log: function (evt) {
+      //window.console.log(evt);
+    },
+  },
+  data() {
+    return {
+      hasErrors: false,
+    };
   },
 };
 </script>
+
