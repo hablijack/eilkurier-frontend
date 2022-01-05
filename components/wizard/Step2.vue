@@ -31,13 +31,27 @@
             <v-container fluid>
               <v-row>
                 <v-col cols="2" v-for="feed in feeds" :key="feed.id">
-                  <v-card height="300">
-                    <v-img :max-height="125" :src="feed.picture"></v-img>
+                  <v-card
+                    height="300"
+                    shaped
+                    hover
+                    color="#ebe5cc"
+                    :class="feed.subscribed ? '' : 'inactive'"
+                    @click="toggleFeedEvent(feed)"
+                  >
+                    <v-img
+                      class="ml-8 mr-8"
+                      :max-height="125"
+                      :src="feed.picture"
+                    ></v-img>
                     <v-card-title>{{ feed.name }}</v-card-title>
                     <v-card-text>{{ feed.description }}</v-card-text>
                     <v-card-actions>
-                      <v-btn color="deep-purple lighten-2" text>
-                        Reserve
+                      <v-btn color="primary" text v-if="!feed.subscribed">
+                        abonnieren
+                      </v-btn>
+                      <v-btn color="primary" text v-if="feed.subscribed">
+                        entfernen
                       </v-btn>
                     </v-card-actions>
                   </v-card>
@@ -59,6 +73,11 @@
 </template>
 
 <style lang="scss" scoped>
+.v-card.inactive {
+  opacity: 0.6;
+  background-color: white !important;
+  transition: inherit;
+}
 .description {
   text-align: justify;
 }
@@ -102,6 +121,9 @@ export default {
     },
     log: function (evt) {
       //window.console.log(evt);
+    },
+    toggleFeedEvent(selectedFeed) {
+      this.$emit("subscribed_to_feed_event", selectedFeed);
     },
   },
   data() {

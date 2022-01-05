@@ -30,7 +30,11 @@
           @category_choosen_event="categoryChoosenEvent"
         />
 
-        <WizardStep2 v-model="currentStep" :feeds="feeds" />
+        <WizardStep2
+          v-model="currentStep"
+          :feeds="feeds"
+          @subscribed_to_feed_event="subscribedToFeedEvent"
+        />
 
         <WizardStep3 v-model="currentStep" />
       </v-stepper-items>
@@ -47,6 +51,14 @@ export default {
     };
   },
   methods: {
+    subscribedToFeedEvent(selectedFeed) {
+      for (let index = 0; index < this.feeds.length; ++index) {
+        if (this.feeds[index].id == selectedFeed.id) {
+          this.feeds[index].subscribed = true;
+          break;
+        }
+      }
+    },
     categoryChoosenEvent(selectedCategories) {
       let idParamString = [];
       for (var i = 0; i < selectedCategories.length; ++i) {
@@ -57,7 +69,15 @@ export default {
         .join("&");
       this.$axios
         .get(`${this.$config.backendUrl}/categories/feeds?${idParamString}`)
-        .then((response) => (this.feeds = response.data))
+        .then((response) => {
+          const allFeeds = [];
+          for (let i = 0; i < response.data.length; i++) {
+            let feed = response.data[i];
+            feed.subscribed = false;
+            allFeeds.push(feed);
+          }
+          this.feeds = allFeeds;
+        })
         .catch((error) => {
           this.hasErrors = true;
           const alert = {
