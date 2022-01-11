@@ -19,7 +19,7 @@
         </v-stepper-step>
       </v-stepper-header>
 
-      <h1>
+      <h1 class="newspaper">
         Willkommen in deiner<br />
         Nachrichtenzentrale
       </h1>
@@ -36,7 +36,11 @@
           @subscribed_to_feed_event="subscribedToFeedEvent"
         />
 
-        <WizardStep3 v-model="currentStep" />
+        <WizardStep3
+          v-model="currentStep"
+          v-bind="selectedFeeds"
+          :feeds="selectedFeeds"
+        />
       </v-stepper-items>
     </v-stepper>
   </v-container>
@@ -47,6 +51,7 @@ export default {
   data() {
     return {
       feeds: [],
+      selectedFeeds: [],
       currentStep: 1,
     };
   },
@@ -54,8 +59,14 @@ export default {
     subscribedToFeedEvent(selectedFeed) {
       for (let index = 0; index < this.feeds.length; ++index) {
         if (this.feeds[index].id == selectedFeed.id) {
-          this.feeds[index].subscribed = true;
+          this.feeds[index].subscribed = !this.feeds[index].subscribed;
           break;
+        }
+      }
+      this.selectedFeeds = [];
+      for (let i = 0; i < this.feeds.length; ++i) {
+        if (this.feeds[i].subscribed) {
+          this.selectedFeeds.push(this.feeds[i]);
         }
       }
     },
@@ -92,11 +103,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .v-stepper__header {
   background-color: #f9f7f1;
 }
-h1 {
+h1.newspaper {
   font-family: "Playfair Display", serif;
   color: black;
   text-transform: uppercase;
@@ -106,7 +117,7 @@ h1 {
   margin-bottom: 10px;
 }
 
-h2 {
+h2.newspaper {
   text-align: center;
   font-family: "Brawler", serif;
   font-weight: normal;

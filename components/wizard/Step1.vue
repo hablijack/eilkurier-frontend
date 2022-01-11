@@ -4,11 +4,11 @@
       <v-container fluid>
         <v-row>
           <v-col>
-            <h2>Schritt 1: Deine Interessen</h2>
+            <h2 class="newspaper">Schritt 1: Deine Interessen</h2>
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="4" class="description">
+          <v-col cols="12" lg="2" class="description">
             <h3>Erklärung</h3>
             Als Erstes solltest Du dir überlegen, welche Art von Nachrichten
             Dich interessieren. Du kannst hier schon mal eine Art Vorauswahl der
@@ -26,8 +26,7 @@
               langweilige Themen wieder entfernen.
             </v-alert>
           </v-col>
-          <v-spacer />
-          <v-col cols="4">
+          <v-col cols="6" lg="5">
             <v-card>
               <v-list>
                 <v-subheader>Was interessiert Dich?</v-subheader>
@@ -58,7 +57,7 @@
             </v-card>
           </v-col>
 
-          <v-col cols="4">
+          <v-col cols="6" lg="5">
             <v-card>
               <v-list>
                 <v-subheader>Unsere Kategorien:</v-subheader>
@@ -100,7 +99,7 @@
   </v-stepper-content>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .flip-list-move {
   transition: transform 0.5s;
 }
@@ -126,27 +125,6 @@
 
 .description {
   text-align: justify;
-}
-h2 {
-  text-align: center;
-  font-family: "Brawler", serif;
-  font-weight: normal;
-  &:before {
-    content: "";
-    width: 450px;
-    height: 7px;
-    border-top: 2px solid black;
-    display: block;
-    margin: 0 auto;
-  }
-  &:after {
-    content: "";
-    width: 350px;
-    height: 10px;
-    border-bottom: 2px solid black;
-    display: block;
-    margin: 0 auto;
-  }
 }
 </style>
 

@@ -4,11 +4,13 @@
       <v-container fluid>
         <v-row>
           <v-col>
-            <h2>Schritt 2: Woher kommen deine Nachrichten?</h2>
+            <h2 class="newspaper">
+              Schritt 2: Woher kommen deine Nachrichten?
+            </h2>
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="4" class="description">
+          <v-col cols="12" lg="2" class="description">
             <h3>RSS-FEEDS</h3>
             Als nächstes brauchen wir Quellen für deine Nachrichten. Wir
             verwenden hier RSS. Der Eilkurier holt regelmäßig Neuigkeiten von
@@ -27,7 +29,7 @@
               und ändern, deine Entscheidungen sind nicht endgültig.
             </v-alert>
           </v-col>
-          <v-col cols="8">
+          <v-col cols="12" lg="10">
             <v-container fluid>
               <v-row>
                 <v-col cols="2" v-for="feed in feeds" :key="feed.id">
@@ -72,7 +74,7 @@
   </v-stepper-content>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .v-card.inactive {
   opacity: 0.6;
   background-color: white !important;
@@ -80,27 +82,6 @@
 }
 .description {
   text-align: justify;
-}
-h2 {
-  text-align: center;
-  font-family: "Brawler", serif;
-  font-weight: normal;
-  &:before {
-    content: "";
-    width: 450px;
-    height: 7px;
-    border-top: 2px solid black;
-    display: block;
-    margin: 0 auto;
-  }
-  &:after {
-    content: "";
-    width: 350px;
-    height: 10px;
-    border-bottom: 2px solid black;
-    display: block;
-    margin: 0 auto;
-  }
 }
 </style>
 
