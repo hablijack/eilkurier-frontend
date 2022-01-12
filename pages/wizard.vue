@@ -40,6 +40,7 @@
           v-model="currentStep"
           v-bind="selectedFeeds"
           :feeds="selectedFeeds"
+          @save_wizard_event="saveWizardEvent"
         />
       </v-stepper-items>
     </v-stepper>
@@ -56,6 +57,21 @@ export default {
     };
   },
   methods: {
+    saveWizardEvent(selectedFeeds) {
+      const url = `${this.$config.backendUrl}/categories/feeds/subscriptions/bulk`;
+      this.$axios
+        .post(url, selectedFeeds)
+        .then((response) => console.log(response.data))
+        .catch((error) => {
+          this.hasErrors = true;
+          const alert = {
+            message: "Fehler beim Abschließen des Wizards!",
+            details: `Beim Aufruf von ${url} ist folgendes Problem aufgetreten: ${error.message}`,
+            show: true,
+          };
+          this.$store.commit("alerts/ADD_ALERT", alert);
+        });
+    },
     subscribedToFeedEvent(selectedFeed) {
       for (let index = 0; index < this.feeds.length; ++index) {
         if (this.feeds[index].id == selectedFeed.id) {

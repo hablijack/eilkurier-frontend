@@ -75,7 +75,7 @@ export default {
   },
   methods: {
     save() {
-      alert("saved");
+      this.$emit("save_wizard_event", this.feeds);
     },
     backClick() {
       this.$emit("input", 2);
