@@ -63,7 +63,12 @@ export default {
         `${context.$config.backendUrl}/categories/feeds/subscriptions/byUser`
       )
       .then((response) => {
-        context.redirect("/profile");
+        if (response.data.length > 0) {
+          context.redirect("/profile");
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
       });
   },
 
@@ -72,7 +77,9 @@ export default {
       const url = `${this.$config.backendUrl}/categories/feeds/subscriptions/bulk`;
       this.$axios
         .post(url, selectedFeeds)
-        .then((response) => console.log(response.data))
+        .then((response) => {
+          this.redirect("/profile");
+        })
         .catch((error) => {
           this.hasErrors = true;
           const alert = {

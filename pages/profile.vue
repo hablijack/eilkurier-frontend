@@ -43,10 +43,10 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-content>
+    <v-main>
       <v-container fluid>
         <h1>Willkommen zu denem Eilkurier!</h1>
       </v-container>
-    </v-content>
+    </v-main>
   </div>
 </template>
