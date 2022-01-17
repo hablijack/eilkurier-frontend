@@ -57,11 +57,13 @@ export default {
     };
   },
   fetchOnServer: true,
-  async fetch() {
-    await this.$axios
-      .$get(`${this.$config.backendUrl}/categories/feeds/subscriptions/byUser`)
+  async fetch(context) {
+    await context.$axios
+      .get(
+        `${context.$config.backendUrl}/categories/feeds/subscriptions/byUser`
+      )
       .then((response) => {
-        console.log(response);
+        context.redirect("/profile");
       });
   },
 
