@@ -56,6 +56,15 @@ export default {
       currentStep: 1,
     };
   },
+  fetchOnServer: true,
+  async fetch() {
+    await this.$axios
+      .$get(`${this.$config.backendUrl}/categories/feeds/subscriptions/byUser`)
+      .then((response) => {
+        console.log(response);
+      });
+  },
+
   methods: {
     saveWizardEvent(selectedFeeds) {
       const url = `${this.$config.backendUrl}/categories/feeds/subscriptions/bulk`;

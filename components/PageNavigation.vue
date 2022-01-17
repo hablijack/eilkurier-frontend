@@ -15,7 +15,7 @@
           <v-toolbar-items>
             <v-tabs>
               <v-tab to="/" nuxt>Start</v-tab>
-              <v-tab :disabled="!this.$auth.loggedIn" to="/wizard" nuxt>
+              <v-tab :disabled="!this.$auth.loggedIn" to="/profile" nuxt>
                 Mein Eilkurier
               </v-tab>
             </v-tabs>
