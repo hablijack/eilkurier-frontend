@@ -40,7 +40,8 @@ export default {
       local: false,
       auth0: {
         domain: process.env.AUTH0_DOMAIN,
-        client_id: process.env.AUTH0_CLIENT_ID
+        client_id: process.env.AUTH0_CLIENT_ID,
+        audience: process.env.AUTH0_AUDIENCE
       }
     }
   },
@@ -92,6 +93,7 @@ export default {
   ],
 
   publicRuntimeConfig: {
-    backendUrl: 'https://eilkurier-backend.herokuapp.com/api'
+    // backendUrl: 'https://eilkurier-backend.herokuapp.com/api'
+    backendUrl: 'http://localhost:8080/api'
   }
 }
