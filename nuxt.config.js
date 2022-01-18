@@ -92,6 +92,7 @@ export default {
   ],
 
   publicRuntimeConfig: {
-    backendUrl: 'https://eilkurier-backend.herokuapp.com/api'
+    //backendUrl: 'https://eilkurier-backend.herokuapp.com/api'
+    backendUrl: 'http://localhost:8080/api'
   }
 }

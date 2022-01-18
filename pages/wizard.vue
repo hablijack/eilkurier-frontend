@@ -78,7 +78,7 @@ export default {
       this.$axios
         .post(url, selectedFeeds)
         .then((response) => {
-          this.redirect("/profile");
+          this.$router.push("/profile");
         })
         .catch((error) => {
           this.hasErrors = true;
