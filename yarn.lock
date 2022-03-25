@@ -5694,10 +5694,10 @@ neo-async@^2.5.0, neo-async@^2.6.1, neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-nightwatch@2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/nightwatch/-/nightwatch-2.0.7.tgz#d3866f096155e863f75b80b074b13e6cae6e474f"
-  integrity sha512-nwkD92cacraSrZwOQFv4qrvmIB9T1nIghh9BDpYAIZRVnwjB+oP5JqhEUFQWabEXRp6jX0d/IcPLUBA/D2R3BQ==
+nightwatch@2.0.10:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/nightwatch/-/nightwatch-2.0.10.tgz#9dae3123b511b45d48528338b558be04fe6398ae"
+  integrity sha512-ywZE+UmVosk2kJFmHPU0vomfDJLniWsjzP9q6GjcgVdp4zIk6hUdpfJ9iJEIwHg5LRbBZA68ox3B/PTudlG+Cg==
   dependencies:
     "@nightwatch/chai" "5.0.1"
     assertion-error "1.1.0"
