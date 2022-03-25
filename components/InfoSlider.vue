@@ -10,7 +10,7 @@
       </v-col>
     </v-row>
     <v-row class="ma-0" justify="center">
-      <v-col cols="12" md="7">
+      <v-col cols="12" md="8">
         <v-carousel cycle light hide-delimiter-background>
           <v-carousel-item>
             <v-sheet height="100%" tile color="transparent">

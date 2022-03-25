@@ -7,10 +7,10 @@
     </v-row>
     <v-row align="center">
       <v-spacer />
-      <v-col cols="12" lg="3" xl="3" align="center">
+      <v-col cols="12" lg="4" xl="4" align="center">
         <img src="~/assets/img/newspaper.png" />
       </v-col>
-      <v-col cols="12" lg="4" xl="4" class="welcome-text">
+      <v-col cols="12" lg="5" xl="5" class="welcome-text">
         <p>
           Kennst Du das? Du sitzt Sonntag Morgens am Frühstückstisch, schmökert
           in der Tageszeitung deiner Wahl und es findet sich partout nichts
