@@ -25,7 +25,7 @@
     "vuedraggable": "2.24.3"
   },
   "devDependencies": {
-    "chromedriver": "99.0.0",
+    "chromedriver": "100.0.0",
     "nightwatch": "2.0.10"
   }
 }
