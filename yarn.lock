@@ -2815,10 +2815,10 @@ core-js-compat@^3.12.1, core-js-compat@^3.18.0, core-js-compat@^3.19.1:
     browserslist "^4.19.1"
     semver "7.0.0"
 
-core-js@3.22.6:
-  version "3.22.6"
-  resolved "https://registry.npmjs.org/core-js/-/core-js-3.22.6.tgz"
-  integrity sha512-2IGcGH00z9I4twgNWU4uGCNEsBFG1s2JudVQrgSCoVhOfwoTwQjxC8aMo9exrpTMOxvobggEpaHnGMmQY4cfBQ==
+core-js@3.22.7:
+  version "3.22.7"
+  resolved "https://registry.npmjs.org/core-js/-/core-js-3.22.7.tgz"
+  integrity sha512-Jt8SReuDKVNZnZEzyEQT5eK6T2RRCXkfTq7Lo09kpm+fHjgGewSbNjV+Wt4yZMhPDdzz2x1ulI5z/w4nxpBseg==
 
 core-js@^2.6.5:
   version "2.6.12"
