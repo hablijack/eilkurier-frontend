@@ -1,18 +1,6 @@
 version: 2
 
 jobs:
-  #qualitygate:
-  #  machine:
-  #    image: ubuntu-2004:202008-01
-  #  resource_class: medium
-  #  steps:
-  #    - checkout
-  #    - run:
-  #        name: Lint
-  #        command: |
-  #          npm install
-  #          npm run lint
-
   build:
     machine:
       image: ubuntu-2004:202008-01
@@ -21,20 +9,12 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Build and push Docker Image to Heroku
+          name: Build and push Docker Image to DockerHub
           command: |
-            docker build --build-arg AUTH0_DOMAIN --build-arg AUTH0_CLIENT_ID --build-arg AUTH0_AUDIENCE -t registry.heroku.com/$HEROKU_APP_NAME/web .
-            docker login -username=$HEROKU_USERNAME --password=$HEROKU_API_KEY registry.heroku.com
-            docker push registry.heroku.com/$HEROKU_APP_NAME/web
-      - run:
-          name: Install Heroku CLI
-          command: sudo curl https://cli-assets.heroku.com/install.sh | sh
-      - run:
-          name: Heroku Login
-          command: heroku container:login
-      - run:
-          name: Release Docker image to Heroku
-          command: heroku container:release --app $HEROKU_APP_NAME web
+            docker build --build-arg AUTH0_DOMAIN --build-arg AUTH0_CLIENT_ID --build-arg AUTH0_AUDIENCE -t hablijack/eilkurier-frontend:latest .
+            docker login -username=$DOCKERHUB_USERNAME --password=$DOCKERHUB_PASSWORD
+            docker push hablijack/eilkurier-frontend:latest
+
 workflows:
   version: 2
   qualitygate_and_build:
