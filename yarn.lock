@@ -4467,7 +4467,7 @@ ignore@^5.1.4, ignore@^5.1.8:
 immediate@~3.0.5:
   version "3.0.6"
   resolved "https://registry.npmjs.org/immediate/-/immediate-3.0.6.tgz"
-  integrity sha1-nbHb0Pr43m++D13V5Wu2BigN5ps=
+  integrity sha512-XXOFtyqDjNDAQxVfYxuF7g9Il/IbWmmlQg2MYKOH8ExIT1qg6xc4zyS3HaEEATgs1btfzxq15ciUiY7gjSXRGQ==
 
 immutable@^4.0.0:
   version "4.0.0"
@@ -5043,15 +5043,15 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-jszip@^3.6.0:
-  version "3.7.1"
-  resolved "https://registry.npmjs.org/jszip/-/jszip-3.7.1.tgz"
-  integrity sha512-ghL0tz1XG9ZEmRMcEN2vt7xabrDdqHHeykgARpmZ0BiIctWxM47Vt63ZO2dnp4QYt/xJVLLy5Zv1l/xRdh2byg==
+jszip@^3.10.0:
+  version "3.10.1"
+  resolved "https://registry.npmjs.org/jszip/-/jszip-3.10.1.tgz"
+  integrity sha512-xXDvecyTpGLrqFrvkrUSoxxfJI5AH7U8zxxtVclpsUtMCq4JQ290LY8AW5c7Ggnr/Y/oK+bQMbqK2qmtk3pN4g==
   dependencies:
     lie "~3.3.0"
     pako "~1.0.2"
     readable-stream "~2.3.6"
-    set-immediate-shim "~1.0.1"
+    setimmediate "^1.0.5"
 
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"
@@ -5240,6 +5240,11 @@ lodash.defaultsdeep@4.6.1:
   version "4.6.1"
   resolved "https://registry.npmjs.org/lodash.defaultsdeep/-/lodash.defaultsdeep-4.6.1.tgz"
   integrity sha512-3j8wdDzYuWO3lM3Reg03MuQR957t287Rpcxp1njpEa8oDrikb+FwGdW3n+FELh/A6qib6yPit0j/pv9G/yeAqA==
+
+lodash.escape@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.npmjs.org/lodash.escape/-/lodash.escape-4.0.1.tgz"
+  integrity sha512-nXEOnb/jK9g0DYMr1/Xvq6l5xMD7GDG55+GSYIYmS0G4tBk/hURD4JR9WCavs04t33WmJx9kCyp9vJ+mr4BOUw==
 
 lodash.isarguments@^3.0.0:
   version "3.1.0"
@@ -5768,10 +5773,10 @@ neo-async@^2.5.0, neo-async@^2.6.1, neo-async@^2.6.2:
   resolved "https://registry.npmjs.org/neo-async/-/neo-async-2.6.2.tgz"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-nightwatch@2.2.2:
-  version "2.2.2"
-  resolved "https://registry.npmjs.org/nightwatch/-/nightwatch-2.2.2.tgz"
-  integrity sha512-tKEnIxElHlzvRfPqpfxZunE2fO64tdJtIogqF22yMKAru6IOpZTzEKQ+E/38hhkTv9jqtgGzkMNycm9nSPb6dQ==
+nightwatch@2.3.3:
+  version "2.3.3"
+  resolved "https://registry.npmjs.org/nightwatch/-/nightwatch-2.3.3.tgz"
+  integrity sha512-NuTxWtG2bac7e12d7mN7bCnnlRDplPDxdLshWfY70VShAVyCE7qFtz6Lto2FycyOz4oa6w2Knpry08qxjgwf0g==
   dependencies:
     "@nightwatch/chai" "5.0.2"
     ansi-to-html "^0.7.2"
@@ -5787,6 +5792,7 @@ nightwatch@2.2.2:
     glob "^7.2.3"
     lodash.clone "3.0.3"
     lodash.defaultsdeep "4.6.1"
+    lodash.escape "^4.0.1"
     lodash.merge "4.6.2"
     minimatch "3.0.4"
     minimist "1.2.6"
@@ -5794,7 +5800,7 @@ nightwatch@2.2.2:
     mocha "9.2.2"
     open "^8.4.0"
     ora "5.4.1"
-    selenium-webdriver "4.1.1"
+    selenium-webdriver "^4.3.1"
     semver "7.3.5"
     stacktrace-parser "^0.1.10"
     strip-ansi "6.0.1"
@@ -7554,14 +7560,14 @@ scule@^0.2.1:
   resolved "https://registry.npmjs.org/scule/-/scule-0.2.1.tgz"
   integrity sha512-M9gnWtn3J0W+UhJOHmBxBTwv8mZCan5i1Himp60t6vvZcor0wr+IM0URKmIglsWJ7bRujNAVVN77fp+uZaWoKg==
 
-selenium-webdriver@4.1.1:
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/selenium-webdriver/-/selenium-webdriver-4.1.1.tgz"
-  integrity sha512-Fr9e9LC6zvD6/j7NO8M1M/NVxFX67abHcxDJoP5w2KN/Xb1SyYLjMVPGgD14U2TOiKe4XKHf42OmFw9g2JgCBQ==
+selenium-webdriver@^4.3.1:
+  version "4.4.0"
+  resolved "https://registry.npmjs.org/selenium-webdriver/-/selenium-webdriver-4.4.0.tgz"
+  integrity sha512-Du+/xfpvNi9zHAeYgXhOWN9yH0hph+cuX+hHDBr7d+SbtQVcfNJwBzLsbdHrB1Wh7MHXFuIkSG88A9TRRQUx3g==
   dependencies:
-    jszip "^3.6.0"
+    jszip "^3.10.0"
     tmp "^0.2.1"
-    ws ">=7.4.6"
+    ws ">=8.7.0"
 
 semver@7.0.0:
   version "7.0.0"
@@ -7654,11 +7660,6 @@ server-destroy@^1.0.1:
   resolved "https://registry.npmjs.org/server-destroy/-/server-destroy-1.0.1.tgz"
   integrity sha1-8Tv5KOQrnD55OD5hzDmYtdFObN0=
 
-set-immediate-shim@~1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/set-immediate-shim/-/set-immediate-shim-1.0.1.tgz"
-  integrity sha1-SysbJ+uAip+NzEgaWOXlb1mfP2E=
-
 set-value@^2.0.0, set-value@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/set-value/-/set-value-2.0.1.tgz"
@@ -7669,7 +7670,7 @@ set-value@^2.0.0, set-value@^2.0.1:
     is-plain-object "^2.0.3"
     split-string "^3.0.1"
 
-setimmediate@^1.0.4:
+setimmediate@^1.0.4, setimmediate@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npmjs.org/setimmediate/-/setimmediate-1.0.5.tgz"
   integrity sha1-KQy7Iy4waULX1+qbg3Mqt4VvgoU=
@@ -8879,10 +8880,10 @@ write-json-file@^2.3.0:
     sort-keys "^2.0.0"
     write-file-atomic "^2.0.0"
 
-ws@>=7.4.6:
-  version "8.5.0"
-  resolved "https://registry.npmjs.org/ws/-/ws-8.5.0.tgz"
-  integrity sha512-BWX0SWVgLPzYwF8lTzEy1egjhS4S4OEAHfsO8o65WOVsrnSRGaSiUaa9e0ggGlkMTtBlmOpEXiie9RUcBO86qg==
+ws@>=8.7.0:
+  version "8.8.1"
+  resolved "https://registry.npmjs.org/ws/-/ws-8.8.1.tgz"
+  integrity sha512-bGy2JzvzkPowEJV++hF07hAD6niYSr0JzBNo/J29WsB57A2r7Wlc1UFcTR9IzrPvuNVO4B8LGqF8qcpsVOhJCA==
 
 ws@^7.3.1:
   version "7.5.6"
