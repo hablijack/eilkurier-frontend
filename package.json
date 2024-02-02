@@ -23,7 +23,7 @@
     "sass": "1.70.0",
     "sass-loader": "14.1.0",
     "vuedraggable": "2.24.3",
-    "webpack": "5.90.0"
+    "webpack": "5.90.1"
   },
   "devDependencies": {
     "chromedriver": "121.0.0",
