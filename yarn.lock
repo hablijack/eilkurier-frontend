@@ -3270,12 +3270,7 @@ dotenv@16.3.1:
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.3.1.tgz#369034de7d7e5b120972693352a3bf112172cc3e"
   integrity sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==
 
-dotenv@^16.3.1:
-  version "16.4.4"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.4.tgz#a26e7bb95ebd36272ebb56edb80b826aecf224c1"
-  integrity sha512-XvPXc8XAQThSjAbY6cQ/9PcBXmFoWuw1sQ3b8HqUCR6ziGXjkTi//kB9SWa2UwqlgdAIuRqAa/9hVljzPehbYg==
-
-dotenv@^16.4.5:
+dotenv@^16.3.1, dotenv@^16.4.5:
   version "16.4.5"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.5.tgz#cdd3b3b604cb327e286b4762e13502f717cb099f"
   integrity sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==
@@ -5390,10 +5385,10 @@ nightwatch-axe-verbose@^2.3.0:
   dependencies:
     axe-core "^4.8.3"
 
-nightwatch@3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/nightwatch/-/nightwatch-3.5.0.tgz#4218cf6f7f6c2721f833afe8ca599d4f5563a06e"
-  integrity sha512-gUIlA8T10lKbdPJY7cOAY4hEdyFG3RdhAuklN52J44DrlTS9PbwlH33GnePrrW0H/77+Mxo4cpXGYXi+scONDA==
+nightwatch@3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/nightwatch/-/nightwatch-3.6.0.tgz#926c7f3dab0c5a146eb45b63d05d2147d8eb6065"
+  integrity sha512-sKadzS9wRSiYpeAmDRlSZFgI9V0VSVtfwe0knk5pWaiQev0AsKw0RTn53JFdkgaH87tPhqmFZVKerrcZDVS49A==
   dependencies:
     "@nightwatch/chai" "5.0.3"
     "@nightwatch/html-reporter-template" "^0.3.0"
