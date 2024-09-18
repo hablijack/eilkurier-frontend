@@ -27,6 +27,6 @@
   },
   "devDependencies": {
     "chromedriver": "128.0.3",
-    "nightwatch": "3.7.0"
+    "nightwatch": "3.8.0"
   }
 }
