@@ -20,7 +20,7 @@
     "core-js": "3.39.0",
     "nuxt": "3.14.159",
     "nuxt-webfontloader": "1.1.0",
-    "sass": "1.80.7",
+    "sass": "1.81.0",
     "sass-loader": "16.0.3",
     "vuedraggable": "2.24.3",
     "webpack": "5.96.1"
