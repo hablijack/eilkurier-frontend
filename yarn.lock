@@ -3939,15 +3939,10 @@ dotenv@16.3.1:
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.3.1.tgz#369034de7d7e5b120972693352a3bf112172cc3e"
   integrity sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==
 
-dotenv@^16.3.1, dotenv@^16.5.0:
+dotenv@^16.3.1, dotenv@^16.4.7, dotenv@^16.5.0:
   version "16.5.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.5.0.tgz#092b49f25f808f020050051d1ff258e404c78692"
   integrity sha512-m/C+AwOAr9/W1UOIZUo232ejMNnJAJtYQjUbHoNTBNTJSvqzzDh7vnrei3o3r3m9blf6ZoDkvcw0VmozNRFJxg==
-
-dotenv@^16.4.7:
-  version "16.4.7"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.7.tgz#0e20c5b82950140aa99be360a8a5f52335f53c26"
-  integrity sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==
 
 dunder-proto@^1.0.1:
   version "1.0.1"
@@ -6313,10 +6308,10 @@ nightwatch-axe-verbose@^2.3.0:
   dependencies:
     axe-core "^4.8.3"
 
-nightwatch@3.12.1:
-  version "3.12.1"
-  resolved "https://registry.yarnpkg.com/nightwatch/-/nightwatch-3.12.1.tgz#0caae6864d8c76d481f0492c1f945c5353b8e0ab"
-  integrity sha512-+tTSjw7w2xY3TRdq5qMkgSztEk6ofMw1l/+Tc4GVRTyUi2/43qV4m2EzOi8Q/3ERKZrIR1Wqqyyh3pw6PJSKMQ==
+nightwatch@3.12.2:
+  version "3.12.2"
+  resolved "https://registry.yarnpkg.com/nightwatch/-/nightwatch-3.12.2.tgz#95ef5322003473b4e1f4cca1e40259b64f9ffe75"
+  integrity sha512-B4MGUvO+RjX8gYg84oJ3DKdgzfXIFRKbs19nLBlUt+aJlzBdv6VdN00wlOmzCakHXZlU10MGm1KiW0dsTlgFRA==
   dependencies:
     "@nightwatch/chai" "5.0.3"
     "@nightwatch/html-reporter-template" "^0.3.0"
