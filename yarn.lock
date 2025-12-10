@@ -6058,10 +6058,10 @@ nightwatch-axe-verbose@^2.3.0:
   dependencies:
     axe-core "^4.8.3"
 
-nightwatch@3.12.3:
-  version "3.12.3"
-  resolved "https://registry.yarnpkg.com/nightwatch/-/nightwatch-3.12.3.tgz#fceee98c391cea32964a9efb6968b3cb7487f50f"
-  integrity sha512-9Y89AXgcD3TIeuNQ+rQaE91Ar5OyEUvzq6OssrzTnhdQxGbzTF7RZpa33Ik+lAMCrPW3A4Llm5yyIX4Svdsglw==
+nightwatch@3.13.0:
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/nightwatch/-/nightwatch-3.13.0.tgz#286a6b52904400faa2a250bc3461c15f8d77afac"
+  integrity sha512-60wFO7VI4oRtCNcVIxu6cY2n8dXMzZt6ysxwchL1mrInm3+7svU0b0I/q+dK3FCYH1rL7WICqnEQxTfZwNxcXg==
   dependencies:
     "@nightwatch/chai" "5.0.3"
     "@nightwatch/html-reporter-template" "^0.3.0"
