@@ -21,7 +21,7 @@
     "nuxt": "4.3.0",
     "nuxt-webfontloader": "1.1.0",
     "sass": "1.97.3",
-    "sass-loader": "16.0.6",
+    "sass-loader": "16.0.7",
     "vuedraggable": "2.24.3",
     "webpack": "5.105.0"
   },
