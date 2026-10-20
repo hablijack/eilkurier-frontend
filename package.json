@@ -26,7 +26,7 @@
     "webpack": "5.112.0"
   },
   "devDependencies": {
-    "chromedriver": "155.0.1",
+    "chromedriver": "155.0.2",
     "nightwatch": "3.16.0"
   }
 }
