@@ -3314,10 +3314,10 @@ chrome-trace-event@^1.0.2:
   resolved "https://registry.npmjs.org/chrome-trace-event/-/chrome-trace-event-1.0.3.tgz"
   integrity sha512-p3KULyQg4S7NIHixdwbGX+nFHkoBiA4YQmyWtjb8XngSKV124nJmRysgAeujbUVb15vh+RvFUfCPqU7rXk+hZg==
 
-chromedriver@155.0.1:
-  version "155.0.1"
-  resolved "https://registry.yarnpkg.com/chromedriver/-/chromedriver-155.0.1.tgz#94576d723dc693b3c4db968b8ae1c1d2670f1b51"
-  integrity sha512-AzfGJuxrIDxfyqe1s0J8ikquv/FtY1ABgjL2ZGzs/S2y4BJPZyUuSxWZl32EubGbxASTVsDOgW6yC+wKQN7k7A==
+chromedriver@155.0.2:
+  version "155.0.2"
+  resolved "https://registry.yarnpkg.com/chromedriver/-/chromedriver-155.0.2.tgz#17c6f386232c933a5465306ee50dbec9858e4920"
+  integrity sha512-IcQx0Q/VnGkMot7fAGQf8h9N1b4+KiHJleDGt97ECNP2jIXc5/FM1/kNpmBckO5pNKP5z0BceZIEJ37iIB1Fog==
   dependencies:
     "@testim/chrome-version" "^1.1.4"
     adm-zip "^0.6.0"
